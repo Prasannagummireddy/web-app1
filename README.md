@@ -93,6 +93,8 @@ docker login -u <username>
 # Give permissions for docker socket file
 sudo chmod 666 /var/run/docker.sock
 sudo usermod -aG docker $USER
+In the config/settings.py file on your local repo edit the ALLOWED_HOSTS setting to add the IP address for your EC2 instance.
+
 Create Dockerfile on local repository
 
 # Use Python 3.11 as the base image

@@ -1,5 +1,5 @@
-# Use Python 3.9 as the base image
-FROM python:3.9
+# Use Python 3.11 as the base image
+FROM python:3.11
 
 # Set the working directory within the container
 WORKDIR /app/test-app
@@ -20,4 +20,4 @@ EXPOSE 8000
 RUN python manage.py migrate
 
 # Run the Django application
-CMD python /app/test-app/manage.py runserver 0.0.0.0:8000
+CMD ["python", "/app/test-app/manage.py", "runserver", "0.0.0.0:8000"]
